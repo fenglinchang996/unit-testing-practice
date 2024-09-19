@@ -7,6 +7,7 @@ const makeVerifier = (rules, logger) => (input) => {
     logger.info("PASSED");
     return true;
   }
+
   logger.info("FAILED");
   return false;
 };
