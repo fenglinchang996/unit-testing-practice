@@ -5,4 +5,4 @@ const debug = (text) => {
   console.log(`DEBUG: ${text}`);
 };
 
-export default { info, debug };
+export { info, debug };

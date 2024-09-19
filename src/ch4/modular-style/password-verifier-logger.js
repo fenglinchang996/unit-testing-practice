@@ -1,11 +1,11 @@
-import logger from "./complicated-logger.js";
-import configs from "./configuration-service.js";
+import { info, debug } from "../complicated-logger.js";
+import { getLogLevel } from "./configuration-service.js";
 
 const log = (text) => {
-  if (configs.getLogLevel() === "info") {
-    logger.info(text);
-  } else if (configs.getLogLevel() === "debug") {
-    logger.debug(text);
+  if (getLogLevel() === "info") {
+    info(text);
+  } else if (getLogLevel() === "debug") {
+    debug(text);
   }
 };
 

@@ -1,5 +1,5 @@
-import logger from "./complicated-logger.js";
-import configs from "./configuration-service.js";
+import * as logger from "../complicated-logger.js";
+import * as configs from "./configuration-service.js";
 
 const originalDependencies = {
   logger,

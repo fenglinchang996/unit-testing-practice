@@ -1,17 +1,15 @@
-import log from "./complicated-logger.js";
-
-const verifyPassword = (input, rules) => {
+const makeVerifier = (rules, logger) => (input) => {
   const failed = rules
     .map((rule) => rule(input))
     .filter((result) => result === false);
 
   if (failed.length === 0) {
-    log.info("PASSED");
+    logger.info("PASSED");
     return true;
   }
 
-  log.info("FAIL");
+  logger.info("FAILED");
   return false;
 };
 
-export default verifyPassword;
+export default makeVerifier;

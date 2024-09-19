@@ -4,4 +4,4 @@ const getLogLevel = () => {
   return configs.logLevel;
 };
 
-export default { getLogLevel };
+export { getLogLevel };
