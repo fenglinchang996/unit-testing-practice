@@ -1,7 +1,4 @@
-import verifyPassword from "./parameter-injection.js";
-
-const SUNDAY = 0,
-  SATURDAY = 6;
+import verifyPassword, { SUNDAY } from "./parameter-injection.js";
 
 describe("verifyPassword - dummy object", () => {
   test("on weekends, throws exceptions", () => {

@@ -14,3 +14,4 @@ const verifyPassword = (input, rules) => {
 };
 
 export default verifyPassword;
+export { SUNDAY, SATURDAY };

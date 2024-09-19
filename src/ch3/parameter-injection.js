@@ -11,3 +11,4 @@ const verifyPassword = (input, rules, currentDay) => {
 };
 
 export default verifyPassword;
+export { SUNDAY, SATURDAY };

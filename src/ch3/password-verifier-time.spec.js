@@ -1,7 +1,5 @@
 import moment from "moment";
-import verifyPassword from "./password-verifier-time.js";
-const SUNDAY = 0,
-  SATURDAY = 6;
+import verifyPassword, { SATURDAY, SUNDAY } from "./password-verifier-time.js";
 
 describe("verifyPassword", () => {
   const TODAY = moment().day();
