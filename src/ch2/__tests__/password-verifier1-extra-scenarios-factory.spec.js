@@ -1,5 +1,8 @@
 import PasswordVerifier1 from "../password-verifier1.js";
 
+const makeFailingRule = (reason) => (input) => ({ passed: false, reason });
+const makePassingRule = () => (input) => ({ passed: true, reason: "" });
+
 describe("verifyPassword", () => {
   let verifier;
   beforeEach(() => (verifier = new PasswordVerifier1()));
@@ -41,7 +44,4 @@ describe("verifyPassword", () => {
       expect(errors[0]).toContain("fake reason");
     });
   });
-
-  const makeFailingRule = (reason) => (input) => ({ passed: false, reason });
-  const makePassingRule = () => (input) => ({ passed: true, reason: "" });
 });
